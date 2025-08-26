@@ -29,4 +29,11 @@ describe("HeaderNav component", () => {
         expect(screen.getByText("About")).toBeInTheDocument();
         expect(screen.getByText("Shop")).toBeInTheDocument();
     })
+
+    it("HeaderNav contains an image", () => {
+        render(<HeaderNav />);
+
+        const img = screen.getByRole("img");
+        expect(img).toBeInTheDocument();
+    })
 })
