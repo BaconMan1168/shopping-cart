@@ -4,8 +4,17 @@ import '@testing-library/jest-dom/vitest'
 import HeaderNav from "./HeaderNav.jsx"
 
 describe("HeaderNav component", () => {
-    it("renders HeaderNav exists in the DOM", () => {
+    it("HeaderNav exists in the DOM", () => {
         render(<HeaderNav />);
         expect(screen.getByRole("banner")).toBeInTheDocument();
+    })
+
+    it("HeaderNav contains a header with the shop name", () => {
+        render(<HeaderNav />);
+        
+        const heading = screen.getAllByRole("heading", { level: 1 })
+
+        expect(heading[1]).toBeInTheDocument();
+        expect(heading[1]).toHaveTextContent("Shopple");
     })
 })
