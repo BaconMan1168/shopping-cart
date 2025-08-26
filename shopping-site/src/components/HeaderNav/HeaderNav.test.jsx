@@ -12,9 +12,9 @@ describe("HeaderNav component", () => {
     it("HeaderNav contains a header with the shop name", () => {
         render(<HeaderNav />);
         
-        const heading = screen.getAllByRole("heading", { level: 1 })
+        const heading = screen.getByRole("heading", { level: 1 })
 
-        expect(heading[1]).toBeInTheDocument();
-        expect(heading[1]).toHaveTextContent("Shopple");
+        expect(heading).toBeInTheDocument();
+        expect(heading).toHaveTextContent("Shopple");
     })
 })
