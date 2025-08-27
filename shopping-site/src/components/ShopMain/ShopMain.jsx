@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import ShopItem from "../ShopItem/ShopItem.jsx"
 
 export default function ShopMain({handleCartAdd}){
     const [products, setProducts] = useState([]);
@@ -21,5 +22,12 @@ export default function ShopMain({handleCartAdd}){
 
     if (loading) return <h1>Loading Store...</h1>;
     if (error) return <h1>A network error has occured.</h1>;
+
+    return (
+        <main>
+            {products.map(product => <ShopItem handleCartAdd={handleCartAdd} product={product} />)}
+        </main>
+        
+    )
     
 }
