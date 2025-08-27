@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 export default function ShopMain({handleCartAdd}){
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -14,8 +15,10 @@ export default function ShopMain({handleCartAdd}){
             return response.json()
         })
         .then(data =>  setProducts(data))
-        .catch(error => setError(error));
+        .catch(error => setError(error))
+        .finally(() => setLoading(false));
     }, [])
 
-    if (error) return <h1>A network error has occured.</h1>
+    if (loading) return <h1>Loading Store...</h1>;
+    if (error) return <h1>A network error has occured.</h1>;
 }
