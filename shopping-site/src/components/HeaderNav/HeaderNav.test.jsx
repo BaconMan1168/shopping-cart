@@ -1,8 +1,7 @@
 import { describe, it, expect } from "vitest"
 import { render, screen } from "@testing-library/react"
 import '@testing-library/jest-dom/vitest'
-import HeaderNav from "./HeaderNav.jsx"
-import { MemoryRouter } from "react-router-dom"; // Needed for Link components
+import HeaderNav from "./HeaderNav"
 
 describe("HeaderNav component", () => {
     it("HeaderNav exists in the DOM", () => {
