@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import cartIcon from "./icons8-shopping-cart-30.png"
 
-const HeaderNav = () => {
+const ShopHeader = () => {
     const [currPage, setCurrPage] = useState("Home");
 
     function handleClick(e){
@@ -24,4 +24,4 @@ const HeaderNav = () => {
 
 
 
-export default HeaderNav;
+export default ShopHeader;
