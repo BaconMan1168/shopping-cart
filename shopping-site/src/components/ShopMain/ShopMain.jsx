@@ -21,4 +21,5 @@ export default function ShopMain({handleCartAdd}){
 
     if (loading) return <h1>Loading Store...</h1>;
     if (error) return <h1>A network error has occured.</h1>;
+    
 }
