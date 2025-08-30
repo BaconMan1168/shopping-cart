@@ -6,6 +6,7 @@ import ShopMain from "./components/ShopMain/ShopMain.jsx"
 import AboutMain from "./components/AboutMain/AboutMain.jsx"
 import CartMain from "./components/CartMain/CartMain.jsx"
 import App from './App.jsx'
+import "./index.css"
 
 const router = createBrowserRouter([
   {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import cartIcon from "./icons8-shopping-cart-30.png"
+import styles from "./ShopHeader.module.css"
 
 const ShopHeader = () => {
     const [currPage, setCurrPage] = useState("Home");
@@ -10,9 +11,9 @@ const ShopHeader = () => {
     }
 
     return (
-        <header>
+        <header className={styles.header}>
             <h1>Shopple</h1>
-            <nav>
+            <nav className={styles.navHeader}>
                 <Link to="/" className={currPage === "Home" ? "on-focus" : ""} onClick={handleClick}>Home</Link>
                 <Link to="/about" className={currPage === "About" ? "on-focus" : ""} onClick={handleClick}>About</Link>
                 <Link to="/shop" className={currPage === "Shop" ? "on-focus" : ""} onClick={handleClick}>Shop</Link>
