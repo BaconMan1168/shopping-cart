@@ -17,9 +17,12 @@ const ShopHeader = () => {
                 <Link to="/" className={currPage === "Home" ? "on-focus" : ""} onClick={handleClick}>Home</Link>
                 <Link to="/about" className={currPage === "About" ? "on-focus" : ""} onClick={handleClick}>About</Link>
                 <Link to="/shop" className={currPage === "Shop" ? "on-focus" : ""} onClick={handleClick}>Shop</Link>
-                <Link to="/cart" className={currPage === "Cart" ? "on-focus" : ""} onClick={handleClick}>Cart</Link>
+                
             </nav>
-            <img src={cartIcon}></img>
+            <Link to="/cart" className={currPage === "Cart" ? "on-focus cartImg" : `${styles.cartImg}`} onClick={handleClick}>
+                <img className={styles.cartImg} src={cartIcon}></img>
+            </Link>
+            
         </header>
     )
 }
