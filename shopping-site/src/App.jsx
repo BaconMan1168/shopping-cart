@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import ShopHeader from "./components/ShopHeader/ShopHeader"
 import ShopFooter from "./components/ShopFooter/ShopFooter"
-import HomeMain from "./components/HomeMain/HomeMain"
+import { Outlet } from "react-router-dom"
 
 import './App.css'
 
@@ -10,7 +9,7 @@ function App() {
   return (
     <div>
       <ShopHeader />
-      <HomeMain />
+      <Outlet />
       <ShopFooter />
     </div>
   )
