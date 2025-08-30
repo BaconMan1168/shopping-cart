@@ -11,6 +11,12 @@
     gap:20px;
 }
 
+.navLinks {
+    color: rgba(255, 255, 255, 0.87);
+    font-size:1.1rem;
+    text-decoration: none;
+}
+
 .cartImg {
     justify-self: end;
 }
