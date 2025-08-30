@@ -5,7 +5,6 @@ import HomeMain from "./components/HomeMain/HomeMain.jsx"
 import ShopMain from "./components/ShopMain/ShopMain.jsx"
 import AboutMain from "./components/AboutMain/AboutMain.jsx"
 import CartMain from "./components/CartMain/CartMain.jsx"
-import './index.css'
 import App from './App.jsx'
 
 const router = createBrowserRouter([
