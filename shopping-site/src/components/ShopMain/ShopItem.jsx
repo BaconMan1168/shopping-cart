@@ -11,9 +11,11 @@ export default function ShopItem({handleCartAdd, product}){
             <div>
                 <label htmlFor="quantity">Qty:</label>
                 <input type="number" id="quantity" name="quantity" />
-                <button onClick={handleCartAdd}>Add To Cart</button>
+                <button onClick={() => handleCartAdd(product)}>Add To Cart</button>
             </div>
             
         </div>
     )
 }
+
+

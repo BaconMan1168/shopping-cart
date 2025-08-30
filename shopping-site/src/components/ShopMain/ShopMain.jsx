@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import ShopItem from "./ShopItem"
+import { useOutletContext } from "react-router-dom"
 
-export default function ShopMain({handleCartAdd}){
+export default function ShopMain(){
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
+
+    const { addToCart } = useOutletContext();
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -25,7 +28,7 @@ export default function ShopMain({handleCartAdd}){
 
     return (
         <main>
-            {products.map(product => <ShopItem handleCartAdd={handleCartAdd} product={product} />)}
+            {products.map(product => <ShopItem key={product.id} handleCartAdd={product => addToCart(product)} product={product} />)}
         </main>
         
     )
