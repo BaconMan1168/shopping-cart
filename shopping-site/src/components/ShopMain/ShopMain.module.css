@@ -54,4 +54,14 @@
 .purchase button {
     padding:2px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+}
+
+.purchase button:hover {
+    transform: scale(1.05);
+}
+
+.purchase button:active{
+    transform:scale(0.95);
 }
