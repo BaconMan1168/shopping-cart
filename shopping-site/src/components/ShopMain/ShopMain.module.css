@@ -1,0 +1,57 @@
+.shopMain {
+    display:flex;
+    padding-top:50px;
+    padding-left:30px;
+    padding-right:30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px;
+    
+}
+
+.shopItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width:320px;
+    padding:24px;
+    background-color: #24453b;
+    box-shadow: 0 4px 12px #00000014;
+    transition: transform 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.shopItem:hover{
+    transform: scale(1.01);
+    background-color: #24453bbe
+}
+
+.itemTitle {
+    font-size:1.4rem;
+    font-weight: bold;
+}
+
+.itemDescription {
+    white-space: nowrap;
+    overflow:scroll;
+    text-overflow: ellipsis;
+}
+
+.itemImage {
+    width:100%;
+    height:auto;
+}
+
+.purchase {
+    display:flex;
+    gap:10px;
+}
+
+.purchase input {
+    border-radius:5px;
+    border-style: solid;
+}
+
+.purchase button {
+    padding:2px;
+    border-radius: 5px;
+}

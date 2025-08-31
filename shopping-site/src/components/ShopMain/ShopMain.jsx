@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import ShopItem from "./ShopItem"
 import { useOutletContext } from "react-router-dom"
+import styles from "./ShopMain.module.css"
 
 export default function ShopMain(){
     const [products, setProducts] = useState([]);
@@ -27,7 +28,7 @@ export default function ShopMain(){
     if (error) return <h1>A network error has occured.</h1>;
 
     return (
-        <main>
+        <main className={styles.shopMain}>
             {products.map(product => <ShopItem key={product.id} handleCartAdd={product => addToCart(product)} product={product} />)}
         </main>
         
