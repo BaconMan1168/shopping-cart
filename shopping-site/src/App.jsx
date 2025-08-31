@@ -2,8 +2,7 @@ import ShopHeader from "./components/ShopHeader/ShopHeader"
 import ShopFooter from "./components/ShopFooter/ShopFooter"
 import { Outlet } from "react-router-dom"
 import { useState } from "react"
-
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -19,7 +18,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <ShopHeader />
       <Outlet context={{ addToCart, cartItems, removeFromCart }} />
       <ShopFooter />

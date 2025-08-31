@@ -1,0 +1,13 @@
+.shopFooter {
+    background-color: #e0dcd9;
+    margin-top:auto;
+    padding:1.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopFooter span {
+    color:black;
+    font-weight: bold;
+}
