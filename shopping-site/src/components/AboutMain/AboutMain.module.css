@@ -1,0 +1,13 @@
+.aboutMain {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100%;
+    padding-top:150px;
+}
+
+.leftElements,
+.rightElements {
+    width:500px;
+    line-height:2;
+}

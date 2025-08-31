@@ -1,7 +1,9 @@
+import styles from "./AboutMain.module.css"
+
 export default function AboutMain(){
     return (
-        <main>
-            <div>
+        <main className={styles.aboutMain}>
+            <div className={styles.leftElements}>
                 <h1>A Shop That You Can Trust</h1>
                 <p>
                     With our patented super secure, not unbreakable, and high quality verification system, 
@@ -10,7 +12,7 @@ export default function AboutMain(){
                     sell and ship the most top notch clothing that anyone can buy for an incredibly cheap price
                 </p>
             </div>
-            <div>
+            <div className={styles.rightElements}>
                 <h1>Who We Are</h1>
                 <p>
                     We are a team of the most highly skilled developers and businuessmen all catered to making sure you 
