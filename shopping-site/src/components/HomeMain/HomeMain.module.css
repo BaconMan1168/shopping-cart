@@ -1,0 +1,42 @@
+.homeMain {
+    padding: 10rem 14rem 0 4rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftElements {
+    width:650px;
+    line-height:normal;
+    text-wrap:wrap;
+}
+
+.homeHeader {
+    font-size: 3.5rem;
+    padding: 0.25em 0 0.25em 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:light;
+}
+
+.rightElements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:8px;
+}
+
+.shopBtn {
+    padding:12px;
+    width:10em;
+    background-color: #1C352D;
+    color:white;
+    border: 0.1px solid white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in, background-color 0.2s ease-in, font-weight 0.2s ease-in;
+}
+
+.shopBtn:hover{
+    transform: scale(1.1);
+    background-color: #142620;
+    font-weight:bold;
+}
