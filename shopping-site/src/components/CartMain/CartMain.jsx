@@ -15,7 +15,7 @@ export default function CartMain(){
 
     return (
         <main className={styles.cartMain}>
-            {cartItems.map(product => <CartItem key={`cart-item: ${product.id}`} cartProduct={product} handleCartRemove={(product) => removeFromCart} />)}
+            {cartItems.map(product => <CartItem key={`cart-item: ${product.id}`} cartProduct={product} handleCartRemove={(product) => removeFromCart(product)} />)}
         </main>
     )
 }
