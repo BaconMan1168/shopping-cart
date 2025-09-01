@@ -1,6 +1,8 @@
 import styles from "./ShopMain.module.css"
 
+
 export default function ShopItem({handleCartAdd, product}){
+
     return (
         <div className={styles.shopItem}>
             <h1 className={styles.itemTitle}>{product.title}</h1>

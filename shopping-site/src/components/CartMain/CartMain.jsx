@@ -1,5 +1,6 @@
 import CartItem from "./CartItem.jsx"
 import { useOutletContext } from "react-router-dom"
+import styles from "./CartMain.module.css"
 
 export default function CartMain(){
     const { cartItems, removeFromCart } = useOutletContext();
@@ -13,8 +14,8 @@ export default function CartMain(){
     }
 
     return (
-        <main>
-            {cartItems.map(product => <CartItem key={`cart-item: ${product.id}`} cartProduct={product} handleCartRemove={(product) => removeFromCart(product)} />)}
+        <main className={styles.cartMain}>
+            {cartItems.map(product => <CartItem key={`cart-item: ${product.id}`} cartProduct={product} handleCartRemove={(product) => removeFromCart} />)}
         </main>
     )
 }
